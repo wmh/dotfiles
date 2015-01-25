@@ -1,0 +1,4 @@
+caption always "%{= bk} %{= bY} [%n]%t @ %H %{-} %= %{= bR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
+hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %0c:%s "
+bindkey -d -k kb stuff "\010"
+

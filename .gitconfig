@@ -1,0 +1,49 @@
+[alias]
+    st = status
+    br = branch
+    rb = svn rebase
+    ci = commit
+    co = checkout
+    sub = submodule
+    sui = submodule update --init
+    oldest-ancestor = !zsh -c 'diff -u <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | sed -ne \"s/^ //p\" | head -1' -
+    branchdiff = !sh -c \"git diff `git oldest-ancestor`..\"
+    branchlog = !sh -c \"git log `git oldest-ancestor`..\"
+    diverges = !zsh -c 'git rev-list --boundary $1...$2 | grep ^- | cut -c2-'
+
+[diff]
+    color = auto
+#    external = /home/$USER/git_diff_wrapper
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = auto
+
+[core]
+#    pager =
+
+[status]
+    color = auto
+
+[branch]
+    color = auto
+
+[merge]
+    tool = araxismerge
+
+[mergetool "araxismerge"]
+    cmd = "/usr/bin/compare -3 -merge -wait $LOCAL $BASE $REMOTE $MERGED"
+    path = /usr/bin/
+
+[http]
+    sslverify = false
+
+[user]
+    name = Hunter Wu
+    email = hunter.wu@gmail.com
+
+[push]
+    default = tracking
+
