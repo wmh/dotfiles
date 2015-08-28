@@ -21,5 +21,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/home/wmh/.gvm/bin/gvm-init.sh" ]] && source "/home/wmh/.gvm/bin/gvm-init.sh"
+[[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
+gvm use go1.5
+export GOPATH=$GOPATH:/media/wmh/Ubuntu-Data/workspace/go
