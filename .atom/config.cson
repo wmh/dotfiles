@@ -13,5 +13,15 @@
       opacity: 0.3
       cr: "↩"
       tab: "⇥"
-    fontSize: 15
     showInvisibles: true
+    fontSize: 15
+  "atom-beautify":
+    _analyticsUserId: "68cc2295-e2bf-4599-8047-4d173e8b4e3b"
+  jshint: {}
+  "linter-jshint":
+    executablePath: "/usr/local/bin/jshint"
+    lintInlineJavaScript: true
+  linter:
+    showErrorPanel: false
+  minimap:
+    absoluteMode: true
