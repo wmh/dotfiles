@@ -25,4 +25,4 @@ fi
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
 gvm use go1.5
-export GOPATH=$GOPATH:/media/wmh/Ubuntu-Data/workspace/go
+export GOPATH=$GOPATH:/home/wmh/workspaces/go

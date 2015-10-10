@@ -25,3 +25,4 @@
     showErrorPanel: false
   minimap:
     absoluteMode: true
+  "go-find-references": {}
