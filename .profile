@@ -26,3 +26,5 @@ fi
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
 gvm use go1.5
 export GOPATH=$GOPATH:/home/wmh/workspaces/go
+export GO15VENDOREXPERIMENT=1
+
