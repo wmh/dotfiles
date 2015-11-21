@@ -23,6 +23,5 @@
     lintInlineJavaScript: true
   linter:
     showErrorPanel: false
-  minimap:
-    absoluteMode: true
+  minimap: {}
   "go-find-references": {}
