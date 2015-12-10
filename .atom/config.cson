@@ -3,10 +3,7 @@
     userId: "62255ded-44d6-31cb-fa2a-07be8c77e743"
   welcome:
     showOnStartup: false
-  core:
-    disabledPackages: [
-      "line-ending-selector"
-    ]
+  core: {}
   editor:
     invisibles:
       color: "#c5c8c6"
@@ -25,3 +22,10 @@
     showErrorPanel: false
   minimap: {}
   "go-find-references": {}
+  "go-rename": {}
+  "go-find-references": {}
+  "go-plus": {}
+  "php-cs-fixer":
+    executablePath: "/usr/local/bin/php-cs-fixer"
+  "atom-autocomplete-php":
+    binComposer: "/usr/bin/composer"

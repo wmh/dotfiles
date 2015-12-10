@@ -1,2 +1,2 @@
-export JAVA_HOME=${HOME}/workspaces/java/jdk1.7.0_71
-export PATH="$PATH":${HOME}/workspaces/java/jdk1.7.0_71/bin
+export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
+export PATH="$PATH":/usr/lib/jvm/java-1.7.0-openjdk-amd64/bin

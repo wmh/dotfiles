@@ -1,3 +1,5 @@
 alias gitlog="git log --pretty=format:'%ai %h %an, %s'"
 alias ws="cd ~/workspaces/"
 alias qq="VBoxManage startvm QQ"
+alias cmsadmin="revel run cmcm.com/cms-admin-web"
+alias ga="php /home/wmh/workspaces/php/src/t5-gauth.php"
