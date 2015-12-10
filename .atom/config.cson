@@ -29,3 +29,5 @@
     executablePath: "/usr/local/bin/php-cs-fixer"
   "atom-autocomplete-php":
     binComposer: "/usr/bin/composer"
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
