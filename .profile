@@ -7,7 +7,6 @@
 # the default umask is set in /etc/profile; for setting the umask
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
-echo PROFILE
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -24,6 +23,6 @@ fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
-gvm use go1.5
+gvm use go1.5.3
 export GO15VENDOREXPERIMENT=1
-export GOPATH=$GOPATH:/home/wmh/workspaces/cms_callblock:/home/wmh/workspaces/cms_wifisecurity_admin
+export GOPATH=$GOPATH:/home/wmh/workspaces/cmcm/cms_callblock:/home/wmh/workspaces/go

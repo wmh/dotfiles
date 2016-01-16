@@ -23,7 +23,6 @@
   minimap: {}
   "go-find-references": {}
   "go-rename": {}
-  "go-find-references": {}
   "go-plus": {}
   "php-cs-fixer":
     executablePath: "/usr/local/bin/php-cs-fixer"
