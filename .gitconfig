@@ -47,3 +47,5 @@
 [push]
     default = tracking
 
+[core]
+	quotepath = off
