@@ -1,7 +1,0 @@
-'.source.go':
-  'fmt.Println':
-    'prefix': 'pl'
-    'body': 'fmt.Println'
-  'fmt.Printf':
-    'prefix': 'pf'
-    'body': 'fmt.Printf'

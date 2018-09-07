@@ -5,8 +5,8 @@ function twitch {
         return
     fi
 
-    INRES="1024x740" # input resolution
-    OUTRES="1024x740"
+    INRES="1366x768" # input resolution
+    OUTRES="1366x768"
     OFFSET="0,0"
     FPS="24" # target FPS
     MAXRATE="1000k"

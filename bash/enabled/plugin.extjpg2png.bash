@@ -1,0 +1,1 @@
+../available/plugin.extjpg2png.bash
