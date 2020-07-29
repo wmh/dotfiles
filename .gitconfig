@@ -49,3 +49,5 @@
 
 [core]
 	quotepath = off
+[cola]
+	spellcheck = false

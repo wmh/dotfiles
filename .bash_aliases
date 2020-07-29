@@ -1,7 +1,4 @@
 alias gitlog="git log --pretty=format:'%ai %h %an, %s'"
 alias ws="cd ~/workspaces/"
-alias qq="VBoxManage startvm QQ"
-alias cmsadmin="revel run cmcm.com/cms-admin-web"
 alias ga="php /home/wmh/workspaces/php/src/zzz-gauth.php"
-alias moffice="sudo mount 10.33.130.31:/media/wmh/Ubuntu-Data/workspaces ~/ws-office"
-alias umoffice="sudo umount 10.33.130.31:/media/wmh/Ubuntu-Data/workspaces"
+alias phpl='find . -type f -name "*.php" | xargs -L 1 php -l'
