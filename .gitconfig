@@ -42,7 +42,7 @@
 
 [user]
     name = Hunter Wu
-    email = hunter.wu@ileopard.com
+    email = hunter.wu@gmail.com
 
 [push]
     default = tracking
@@ -51,3 +51,7 @@
 	quotepath = off
 [cola]
 	spellcheck = false
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+

@@ -127,7 +127,7 @@ done
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
-gvm use go1.16.1
+gvm use go1.16.7
 export GOPATH=/home/$USER/workspaces/go
 export LANGUAGE="en_US.UTF-8"
 export PATH=/home/$USER/workspaces/go/bin:$PATH

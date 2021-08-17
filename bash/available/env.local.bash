@@ -5,4 +5,5 @@ export LC_ALL=en_US.UTF-8
 
 export PHP_ENV=DEV
 
-export PATH=${PATH}:${HOME}/bin
+export PATH=${PATH}:${HOME}/bin:${HOME}/.local/bin
+
