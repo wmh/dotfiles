@@ -27,8 +27,30 @@ fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
-gvm use go1.16.7
+gvm use go1.25.5
 export GOPATH=/home/$USER/workspaces/go
 export LANGUAGE="en_US.UTF-8"
 export PATH=/home/$USER/workspaces/go/bin:$PATH
+
+# Fix GVM's broken cd function
+function cd() {
+    builtin cd "$@" || return $?
+    
+    # GVM auto-switching for .go-version files
+    if type __gvmp_find_closest_dot_go_version &>/dev/null; then
+        local dot_go_version="$(__gvmp_find_closest_dot_go_version 2>/dev/null)"
+        if [[ $? -eq 0 && -n "${dot_go_version}" ]]; then
+            local use_goversion="$(__gvmp_read_dot_go_version "${dot_go_version}" 2>/dev/null)"
+            [[ -n "${use_goversion}" ]] && gvm use "${use_goversion}" &>/dev/null
+        fi
+        
+        local dot_go_pkgset="$(__gvmp_find_closest_dot_go_pkgset 2>/dev/null)"
+        if [[ $? -eq 0 && -n "${dot_go_pkgset}" ]]; then
+            local use_gopkgset="$(__gvmp_read_dot_go_pkgset "${dot_go_pkgset}" 2>/dev/null)"
+            [[ -n "${use_gopkgset}" ]] && gvm pkgset use "${use_gopkgset}" &>/dev/null
+        fi
+    fi
+    
+    return 0
+}
 

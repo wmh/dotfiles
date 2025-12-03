@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -127,8 +127,19 @@ done
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
-gvm use go1.16.7
+gvm use go1.25.5 2>/dev/null || gvm use go1.22 2>/dev/null || true
+unset -f cd
 export GOPATH=/home/$USER/workspaces/go
 export LANGUAGE="en_US.UTF-8"
-export PATH=/home/$USER/workspaces/go/bin:$PATH
+export PATH=/home/$USER/workspaces/go/bin:/home/$USER/.npm-global/bin:$PATH
 
+
+# Add ~/.local/bin to PATH for locally installed binaries (like starship)
+if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Initialize starship prompt
+if command -v starship &> /dev/null; then
+    eval "$(starship init bash)"
+fi

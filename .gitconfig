@@ -45,7 +45,7 @@
     email = hunter.wu@gmail.com
 
 [push]
-    default = tracking
+    default = simple
 
 [core]
 	quotepath = off
