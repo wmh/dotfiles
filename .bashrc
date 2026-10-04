@@ -127,10 +127,9 @@ done
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
-gvm use go1.25.5 2>/dev/null || gvm use go1.22 2>/dev/null || true
+gvm use go1.26.5 2>/dev/null || gvm use go1.25.5 2>/dev/null || true
 unset -f cd
 export GOPATH=/home/$USER/workspaces/go
-export LANGUAGE="en_US.UTF-8"
 export PATH=/home/$USER/workspaces/go/bin:/home/$USER/.npm-global/bin:$PATH
 
 
@@ -143,3 +142,8 @@ fi
 if command -v starship &> /dev/null; then
     eval "$(starship init bash)"
 fi
+. "$HOME/.cargo/env"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

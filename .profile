@@ -27,9 +27,8 @@ fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
-gvm use go1.25.5
+gvm use go1.26.5
 export GOPATH=/home/$USER/workspaces/go
-export LANGUAGE="en_US.UTF-8"
 export PATH=/home/$USER/workspaces/go/bin:$PATH
 
 # Fix GVM's broken cd function
@@ -54,3 +53,4 @@ function cd() {
     return 0
 }
 
+. "$HOME/.cargo/env"

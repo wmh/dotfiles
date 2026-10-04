@@ -1,1 +1,0 @@
-../available/theme.colorful.bash
